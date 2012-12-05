@@ -97,18 +97,18 @@
 
 (defvar slate-font-lock-keywords
   `(("^\\s-*\\<\\(config\\)\\>"
-     (1 font-lock-builtin-face)
-     (,(regexp-opt slate-config-options 'words) nil nil (0 font-lock-keyword-face)))
+     (1 font-lock-keyword-face)
+     (,(regexp-opt slate-config-options 'words) nil nil (0 font-lock-constant-face)))
     ("^\\s-*\\<\\(default\\)\\>"
-     (1 font-lock-builtin-face)
-     ("\\<count\\|resolutions\\>" nil nil (0 font-lock-keyword-face)))
-    ("^\\s-*\\<\\(alias\\)\\> \\_<\\(\\(\\s_\\|\\w\\)*\\)\\_>"
-     (1 font-lock-builtin-face)
+     (1 font-lock-keyword-face)
+     ("\\<count\\|resolutions\\>" nil nil (0 font-lock-constant-face)))
+    ("^\\s-*\\<\\(alias\\)\\>\\s-+\\_<\\(\\(\\s_\\|\\w\\)*\\)\\_>"
+     (1 font-lock-keyword-face)
      (2 font-lock-variable-name-face))
-    ("^\\s-*\\<\\(layout\\|bind\\|source\\)\\>" 1 font-lock-builtin-face)
+    ("^\\s-*\\<\\(layout\\|bind\\|source\\)\\>" 1 font-lock-keyword-face)
     ("\\<throw\\|corner\\>" (0 font-lock-builtin-face) ("\\<resize\\>" nil nil (0 font-lock-keyword-face)))
     ("\\${\\_<\\(\\s_\\|\\w\\)*\\_>}" . font-lock-variable-name-face)
-    (,(regexp-opt slate-misc-keywords 'words) . font-lock-keyword-face)
+    (,(regexp-opt slate-misc-keywords 'words) . font-lock-constant-face)
     (,(regexp-opt (append '() slate-functions slate-operations) 'words) . font-lock-builtin-face)
     (,(regexp-opt (append '() slate-constants slate-bind-modifiers) 'words) . font-lock-constant-face)))
 
