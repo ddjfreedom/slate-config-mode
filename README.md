@@ -1,4 +1,4 @@
-# Slate #
+# slate-config-mode #
 An emacs major mode for [Slate](https://github.com/jigish/slate)
 
 # Installation #
@@ -7,19 +7,19 @@ An emacs major mode for [Slate](https://github.com/jigish/slate)
 Add the following recipe to `el-get-sources`:
 
 ```lisp
-(:name slate-mode
+(:name slate-config-mode
                :type github
-               :pkgname "ddjfreedom/slate-mode"
-               :features slate-mode)
+               :pkgname "ddjfreedom/slate-config-mode"
+               :features slate-config-mode)
 ```
 
-Then run `M-x el-get-install` to install `slate-mode`.
+Then run `M-x el-get-install` to install `slate-config-mode`.
 
 ## Manual ##
-Put `slate-mode.el` into a directory in `load-path`, and add
+Put `slate-config-mode.el` into a directory in `load-path`, and add
 
 ```lisp
-(require 'slate-mode)
+(require 'slate-config-mode)
 ```
 
 into emacs init file.
